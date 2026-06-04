@@ -231,7 +231,7 @@ Inorder traversal: 20 30 45 50 60 70 80
 
 ---
 
-<a id="how_to_run"></a>
+<a id="how-to-run"></a>
 ## 🛠️ How to Run
 
 ### Prerequisites  
