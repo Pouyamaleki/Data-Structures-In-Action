@@ -11,7 +11,7 @@
 ## 📖 Table of Contents
 
 - [📌 Overview](#overview)
-- [🗂️ Project Structure](#️project_structure)
+- [🗂️ Project Structure](#project-structure)
 - [🚀 Implementations](#implementations)
 - [🧪 Testing](#testing)
 - [🎓 Research Perspective](#research_perspective)
@@ -33,7 +33,7 @@ This repository contains **clean, well-documented implementations** of essential
 
 ---
 
-<a id="project_structurew"></a>
+<a id="project-structure"></a>
 ## 📁Project Structure
 
 ```
