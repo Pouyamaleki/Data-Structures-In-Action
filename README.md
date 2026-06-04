@@ -15,7 +15,7 @@
 - [🚀 Implementations](#implementations)
 - [🧪 Testing](#testing)
 - [🎓 Research Perspective](#research_perspective)
-- [🛠️ How to Run](#️how-to-run)
+- [🛠️ How to Run](#how-to-run)
 
 
 ---
