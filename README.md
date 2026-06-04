@@ -77,10 +77,11 @@ This repository contains **clean, well-documented implementations** of essential
 <a id="implementations"></a>
 ## 🚀 Implementations
 
+<br>
 
-<h3 align="center">📁 Fundamentals - Data Structures</h3>
+<h3>📁 Fundamentals - Data Structures</h3>
 
-<table align="center">
+<table>
   <thead>
     <tr>
       <th>📂 Category</th>
@@ -132,9 +133,9 @@ This repository contains **clean, well-documented implementations** of essential
 
 <br>
 
-<h3 align="center">⚡ Algorithms</h3>
+<h3>⚡ Algorithms</h3>
 
-<table align="center">
+<table>
   <thead>
     <tr>
       <th>📂 Category</th>
@@ -158,9 +159,9 @@ This repository contains **clean, well-documented implementations** of essential
 
 <br>
 
-<h3 align="center">🧮 Applications</h3>
+<h3>🧮 Applications</h3>
 
-<table align="center">
+<table>
   <thead>
     <tr>
       <th>📂 Category</th>
@@ -178,6 +179,8 @@ This repository contains **clean, well-documented implementations** of essential
     </tr>
   </tbody>
 </table>
+
+<br>
 
 ---
 
