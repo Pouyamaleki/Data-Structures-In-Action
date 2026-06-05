@@ -272,7 +272,7 @@ GitHub: [Pouya Maleki](https://github.com/Pouyamalek)
 Research Interests: Data structures, algorithms, performance optimization
 
 
-## 📄 License
+## 📝 License
 
 MIT License - feel free to use, learn, and improve!   
 
