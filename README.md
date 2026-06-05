@@ -10,12 +10,12 @@
 
 ## 📖 Table of Contents
 
-- [📌 Overview](#overview)
-- [🗂️ Project Structure](#project-structure)
-- [🚀 Implementations](#implementations)
-- [🧪 Testing](#testing)
-- [🎓 Research Perspective](#research_perspective)
-- [🛠️ How to Run](#how-to-run)
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Implementations](#implementations)
+- [Testing](#testing)
+- [Research Perspective](#research_perspective)
+- [How to Run](#how-to-run)
 
 
 ---
