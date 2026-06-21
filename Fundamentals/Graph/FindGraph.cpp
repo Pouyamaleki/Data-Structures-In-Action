@@ -1,6 +1,7 @@
 #include <iostream>
 #include <bitset>
 #include <vector>
+
 using namespace std;
 
 const int LIMIT = 2005;
