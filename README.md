@@ -44,7 +44,12 @@ This repository contains **clean, well-documented implementations** of essential
 │   ├── 📁ARRAY  
 │   │   └── 📄DeleteArray.cpp  
 │   ├── 📁BST  
-│   │   └── 📄BST.cpp   
+│   │   └── 📄BST.cpp
+│   ├── 📁Graph
+│   │   ├── 📄CircularCity.cpp
+│   │   ├── 📄FindGraph.cpp
+│   │   ├── 📄MinPaymentMaxWork.cpp
+│   │   └── 📄PrimeGraph.cpp
 │   ├── 📁HASH  
 │   │   └── 📄BuildHash.cpp  
 │   ├── 📁HEAP  
