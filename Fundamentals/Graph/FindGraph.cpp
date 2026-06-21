@@ -1,46 +1,66 @@
 #include <iostream>
+#include <bitset>
 #include <vector>
 using namespace std;
 
+const int LIMIT = 2005;
+
 int main()
 {
+    // to run the program faster
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int N, M;
     cin >> N >> M;
 
-    // adjacency matrix
-    vector<vector<bool>> adj(N + 1, vector<bool>(N + 1, false));
+    // adjacency matrix using bitset (instead of vector<vector<bool>>)
+    vector<bitset<LIMIT>> adj(N + 1);
 
-    // get the Edges
+    // get the edges
     for (int i = 0; i < M; i++)
     {
-        int u, v;
-        cin >> u >> v;
-        adj[u][v] = true;
-        adj[v][u] = true;
+        int a, b;
+        cin >> a >> b;
+        adj[a].flip(b); // mark edge a-b
+        adj[b].flip(a); // mark edge b-a
     }
 
-    // check every node to see if they have atleast 3 neighbor or no
-    for (int u = 1; u <= N; u++)
+    bool hasK23 = false;
+
+    // check every pair of nodes to see if they have at least 3 common neighbors
+    for (int x = 1; x <= N && !hasK23; x++)
     {
-        for (int v = u + 1; v <= N; v++)
+        for (int y = x + 1; y <= N && !hasK23; y++)
         {
             int common = 0;
+            bitset<LIMIT> inter = adj[x] & adj[y]; // common neighbors = intersection
 
-            for (int w = 1; w <= N; w++)
+            // count common neighbors
+            for (int z = 1; z <= N; z++)
             {
-                if (w != u && w != v && adj[u][w] && adj[v][w])
+                if (inter.test(z))
                 {
                     common++;
                     if (common >= 3)
-                    {   
-                        cout << "YES" << endl;
-                        return 0;
+                    {
+                        hasK23 = true;
+                        break;
                     }
                 }
             }
         }
     }
 
-    cout << "NO" << endl;
+    // print the final answer
+    if (hasK23)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
+
     return 0;
 }
