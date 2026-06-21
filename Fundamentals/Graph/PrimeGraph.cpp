@@ -1,43 +1,61 @@
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 using namespace std;
+
+// a function to make the keys
+long long makeKey(int u, int v)
+{
+    if (u > v)
+    {
+        swap(u, v);
+    }
+
+    return (long long)u * 1000001 + v;
+}
 
 int main()
 {
+    // to run the program faster
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     int n, m;
     cin >> n >> m;
 
-    // adjacency matrix with n+1 * n+1 size
-    vector<vector<bool>> graph(n + 1, vector<bool>(n + 1, false));
+    // get enough space for the edges
+    vector<long long> edges;
+    edges.reserve(m);
 
-    // for loop to input the Edges
+    // get the edges
     for (int i = 0; i < m; i++)
     {
         int u, v;
         cin >> u >> v;
-        graph[u][v] = true;
-        graph[v][u] = true;
+        edges.push_back(makeKey(u, v));
     }
 
-    // number of Questions
+    // sort the edges for the binery search
+    sort(edges.begin(), edges.end());
+
     int q;
     cin >> q;
 
-    // for loop to get and check the questions
-    for (int i = 0; i < q; i++)
+    // get every Question and check them
+    while (q--)
     {
         int u, v;
         cin >> u >> v;
+        long long key = makeKey(u, v);
 
-        // chceck the Questions
-        if (!graph[u][v])
+        // check for the right answer
+        if (binary_search(edges.begin(), edges.end(), key))
         {
-            cout << "YES" << endl;
+            cout << "NO" << endl;
         }
         else
         {
-            cout << "NO" << endl;
+            cout << "YES" << endl;
         }
     }
 
