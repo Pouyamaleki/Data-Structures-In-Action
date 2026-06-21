@@ -15,10 +15,10 @@ int main()
     int N, M;
     cin >> N >> M;
 
-    // adjacency matrix using bitset (instead of vector<vector<bool>>)
+    // adjacency matrix using bitset
     vector<bitset<LIMIT>> adj(N + 1);
 
-    // get the edges
+    // for loop to get the edges
     for (int i = 0; i < M; i++)
     {
         int a, b;
@@ -29,26 +29,17 @@ int main()
 
     bool hasK23 = false;
 
-    // check every pair of nodes to see if they have at least 3 common neighbors
+    // check every pair of nodes to see if they have at least 3 common neighbors or no
     for (int x = 1; x <= N && !hasK23; x++)
     {
         for (int y = x + 1; y <= N && !hasK23; y++)
         {
-            int common = 0;
-            bitset<LIMIT> inter = adj[x] & adj[y]; // common neighbors = intersection
+            int common = (adj[x] & adj[y]).count(); // count the common neighbors
 
-            // count common neighbors
-            for (int z = 1; z <= N; z++)
+            if (common >= 3)
             {
-                if (inter.test(z))
-                {
-                    common++;
-                    if (common >= 3)
-                    {
-                        hasK23 = true;
-                        break;
-                    }
-                }
+                hasK23 = true;
+                break;
             }
         }
     }
