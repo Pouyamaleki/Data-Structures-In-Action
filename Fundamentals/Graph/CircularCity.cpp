@@ -8,8 +8,7 @@ int main()
     cin >> n >> m;
 
     // Bolean variables to check if there is a direction or no
-    bool ToCenter = false;
-    bool AwayFromCenter = false;
+    bool ToCenter = false , AwayFromCenter = false;
 
     // for loop to input the values
     for (int i = 0; i < n; i++)
@@ -28,28 +27,16 @@ int main()
         }
     }
 
-    // check if every path has the same direction
-    bool allCircularSameDirection = true;
-
-    // get the first circular direction
-    int firstCircularDirection;
-    cin >> firstCircularDirection;
-
-    // loop to get the other directions
+    /* loop to get the other directions and we ignore them
+    beacuse it's a part of the input and we don't need them */
     for (int i = 1; i < m; i++)
     {
         int direction;
         cin >> direction;
-
-        // check if all of the direction are the same or no
-        if (direction != firstCircularDirection)
-        {
-            allCircularSameDirection = false;
-        }
     }
 
     // check for the finall answer
-    if (allCircularSameDirection &&ToCenter && AwayFromCenter)
+    if (ToCenter && AwayFromCenter)
     {
         cout << "YES" << endl;
     }
