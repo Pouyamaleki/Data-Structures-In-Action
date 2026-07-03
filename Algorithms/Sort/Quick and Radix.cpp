@@ -163,34 +163,34 @@ int main()
 {
     vector<int> arr1 = {25, 17, 8, 42, 17, 3, 19, 8, 33};
 
-    cout << "array before sort";
+    cout << "array before sort " << endl;
     printArray(arr1);
 
     // sort using the Quick sort algorithm
     vector<int> arrQS = arr1;
     quickSort(arrQS, 0, arrQS.size() - 1);
-    cout << endl << "Quick Sort: ";
+    cout << endl << "Quick Sort: " << endl;
     printArray(arrQS);
 
     // sort using the Radix Sort algorithm
     vector<int> arrRS = arr1;
     radixSort(arrRS);
-    cout << "Radix Sort: ";
+    cout << "Radix Sort: " << endl;
     printArray(arrRS);
 
     // hybrid
     vector<int> arrHybrid = arr1;
     cout << endl << "Hybrid Sort: " << endl;
     hybridSort(arrHybrid);
-    cout << "Result: ";
+    cout << "Result: " << endl;
     printArray(arrHybrid);
 
     // test with a bigger array to show the Quick Sort advantage
     vector<int> arrLarge = {1000, 999, 888, 777, 666, 555, 444, 333, 222, 111, 0, 12345, 98765, 54321};
-    cout << endl << "the bigger array: ";
+    cout << endl << "the bigger array: " << endl;
     printArray(arrLarge);
     hybridSort(arrLarge);
-    cout << "result: ";
+    cout << "result: " << endl;
     printArray(arrLarge);
 
     return 0;
