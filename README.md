@@ -85,8 +85,6 @@ This repository contains **clean, well-documented implementations** of essential
 <a id="implementations"></a>
 ## 🚀 Implementations
 
-<br>
-
 <h3>📁 Fundamentals - Data Structures</h3>
 
 <table>
@@ -107,6 +105,23 @@ This repository contains **clean, well-documented implementations** of essential
       <td>🌲 BST</td>
       <td><code>BST.cpp</code></td>
       <td>Insert, Delete, Search, Update (with successor)</td>
+    </tr>
+    <tr>
+      <td rowspan="4">📊 Graph</td>
+      <td><code>CircularCity.cpp</code></td>
+      <td>Find circular route in city network (graph traversal)</td>
+    </tr>
+    <tr>
+      <td><code>FindGraph.cpp</code></td>
+      <td>Detect and extract graph components</td>
+    </tr>
+    <tr>
+      <td><code>MinPaymentMaxWork.cpp</code></td>
+      <td>Minimum cost to maximize work (flow / assignment)</td>
+    </tr>
+    <tr>
+      <td><code>PrimeGraph.cpp</code></td>
+      <td>Construct graph based on prime-number properties</td>
     </tr>
     <tr>
       <td>🔑 HASH</td>
@@ -162,6 +177,15 @@ This repository contains **clean, well-documented implementations** of essential
       <td><code>Fibonacci.cpp</code></td>
       <td>Find Fibonacci numbers in array using perfect square property (5n²±4)</td>
     </tr>
+    <tr>
+      <td rowspan="2">🔄 Sort</td>
+      <td><code>InsertionAndMerge.cpp</code></td>
+      <td>Insertion Sort &amp; Merge Sort (comparison-based)</td>
+    </tr>
+    <tr>
+      <td><code>QuickAndRadix.cpp</code></td>
+      <td>Quick Sort &amp; Radix Sort (divide‑and‑conquer &amp; integer sorting)</td>
+    </tr>
   </tbody>
 </table>
 
@@ -180,10 +204,16 @@ This repository contains **clean, well-documented implementations** of essential
   </thead>
   <tbody>
     <tr>
-      <td>🧮 SimpleCalculator</td>
+      <td>🧮 Calculator</td>
       <td><code>SimpleCalculator.cpp</code></td>
       <td>Infix expression evaluation with +, -, parentheses (supports multiple digits)</td>
       <td>Stack, Sign tracking, Parentheses handling</td>
+    </tr>
+    <tr>
+      <td>🔢 Greatest Number</td>
+      <td><code>GreatestNumber.cpp</code></td>
+      <td>Arrange numbers to form the largest possible concatenated number</td>
+      <td>Custom comparator, Merge Sort (manual implementation)</td>
     </tr>
   </tbody>
 </table>
