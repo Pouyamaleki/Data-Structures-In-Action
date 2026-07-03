@@ -64,12 +64,15 @@ This repository contains **clean, well-documented implementations** of essential
 ├── 📁Algorithms  
 │   ├── 📁Array  
 │   │   └── 📄LongestSubArray.cpp  
-│   └── 📁Fibonacci  
-│       └── 📄Fibonacci.cpp
-│  
+│   ├── 📁Fibonacci  
+│   │   └── 📄Fibonacci.cpp
+│   └── 📁Sort
+│       ├── 📄InsertionAndMerge.cpp
+│       └── 📄QuickAndRadix.cpp
+│ 
 ├── 📁 Applications  
-│   └── 📁SimpleCalculator  
-│       └── 📄SimpleCalculator.cpp
+│   ├── 📄SimpleCalculator.cpp
+│   └── 📄GreatestNumber.cpp
 │  
 ├── 📄README.md
 │  
