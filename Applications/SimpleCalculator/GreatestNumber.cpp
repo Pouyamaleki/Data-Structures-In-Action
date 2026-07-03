@@ -4,65 +4,55 @@
 
 using namespace std;
 
-// function to compare to string
-bool isGreater(const string &a, const string &b)
+// comparing two numbers using strings
+bool isBetter(const string &a, const string &b)
 {
-    return (a + b) > (b + a);
+    return a + b > b + a;
 }
 
-// merge sort
+// a function to merge two array
 void merge(vector<string> &arr, int left, int middle, int right)
 {
     int n1 = middle - left + 1;
     int n2 = right - middle;
 
-    vector<string> leftArr(n1);
-    vector<string> rightArr(n2);
+    vector<string> L(n1), R(n2);
 
     for (int i = 0; i < n1; i++)
     {
-        leftArr[i] = arr[left + i];
+        L[i] = arr[left + i];
     }
-    for (int j = 0; j < n2; j++)
+    for (int i = 0; i < n2; i++)
     {
-        rightArr[j] = arr[middle + 1 + j];
-    }
+        R[i] = arr[middle + 1 + i];
+    } 
 
-    int i = 0;
-    int j = 0;
-    int k = left;
+    int i = 0, j = 0, k = left;
 
     while (i < n1 && j < n2)
     {
-        if (isGreater(leftArr[i], rightArr[j]))
+        if (isBetter(L[i], R[j]))
         {
-            arr[k] = leftArr[i];
-            i++;
+            arr[k++] = L[i++];
         }
         else
         {
-            arr[k] = rightArr[j];
-            j++;
+            arr[k++] = R[j++];
         }
-        k++;
     }
 
     while (i < n1)
     {
-        arr[k] = leftArr[i];
-        i++;
-        k++;
+        arr[k++] = L[i++];
     }
 
     while (j < n2)
     {
-        arr[k] = rightArr[j];
-        j++;
-        k++;
+        arr[k++] = R[j++];
     }
 }
 
-// merge sort recurtion
+// merge sort function
 void mergeSort(vector<string> &arr, int left, int right)
 {
     if (left >= right)
@@ -78,55 +68,50 @@ void mergeSort(vector<string> &arr, int left, int right)
     merge(arr, left, middle, right);
 }
 
-// main function to tst the program
 int main()
 {
-    // to make the input and output faster for the time limit
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    // this part is for faster input and output to prevent the time limit
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
     int n;
     cin >> n;
 
-    vector<string> arr(n);
-    bool allZero = true;
+    vector<string> nums(n);
 
-    // get the numbers
+    // getting the numbers
     for (int i = 0; i < n; i++)
     {
-        cin >> arr[i];
-        if (arr[i] != "0")
+        cin >> nums[i];
+    }
+
+    // sort the numbers using the merge sort
+    mergeSort(nums, 0, n - 1);
+
+    // combining the numbers
+    string result;
+    for (const string &s : nums)
+    {
+        result += s;
+    }
+
+    // if all of the numbers are 0 , the output should be 0 too
+    bool allZero = true;
+    for (char c : result)
+    {
+        if (c != '0')
         {
             allZero = false;
+            break;
         }
     }
 
-    // if all of the numbers are 0 the outcome will be 0 too
     if (allZero)
     {
-        cout << 0 << endl;
-        return 0;
-    }
-
-    // merge sort test
-    mergeSort(arr, 0, n - 1);
-
-    // comining the numbers
-    string result = "";
-    for (int i = 0; i < n; i++)
-    {
-        result += arr[i];
-    }
-
-    // if the first character is 0
-    if (result[0] == '0')
-    {
-        cout << 0 << endl;
+        cout << "0" << endl;
     }
     else
-    {
         cout << result << endl;
-    }
 
     return 0;
 }
